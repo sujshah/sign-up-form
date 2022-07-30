@@ -7,6 +7,7 @@
 
 * {
     font-size: 3.5vh;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;;
 }
 
 .container {
@@ -16,6 +17,7 @@
     left: 0;
     top: 0;
     z-index: 10;
+    display: flex;
 }
 
 .brand {
@@ -23,7 +25,6 @@
     background-size: cover;
     height: 100%;
     width: 30%;
-    position: absolute;
 }
 
 .logo-area {
@@ -66,4 +67,77 @@ a {
     font-size: 0.5rem;
     color: #F6F7F8;
     text-decoration: none;
+}
+
+.form-section {
+    display: flex;
+    background-color: rgba(214, 217, 220, 0.2);
+    height: 100%;
+    width: 70%;
+    right: 0;
+    flex-direction: column;
+}
+
+.info {
+    padding: 5% 20% 2.5% 5%;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.section {
+    width: 100%;
+}
+
+.section.form {
+    background-color: white;
+    /*height: 100px;*/
+}
+
+input {
+    border: 2px solid #000;
+    /*margin-bottom: 15px;*/
+    /*padding: 5px;*/
+    border-radius: 5px;
+    font-size: 0.6rem;
+    appearance: none;
+    /*ce*/
+}
+
+.form-items {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    width: 70%;
+}
+
+.pair {
+    font-size: 0.2rem;
+    margin-left: 5%;
+    flex: 35%;
+    padding: 0;
+}
+
+label {
+    font-size: 0.6rem;
+}
+
+button {
+    background-color: #596D48;
+    color: white;
+    padding: 40px 150px;
+    position: relative;
+    top: 20%;
+    left: 5%;
+    font-weight: bold;
+    font-size: 0.4rem;
+    border-radius: 15px;
+    border-color: #596D48;
+}
+
+.last {
+    font-size: 0.4rem;
+    position: relative;
+    top: 30%;
+    left: 5%;
 }
