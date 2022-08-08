@@ -4,6 +4,31 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        function validate() {
+            const password = document.getElementById("password");
+            const confirmPassword = document.getElementById("confirmPassword");
+
+            if (password.value === confirmPassword.value) {
+                password.classList.remove("error");
+                confirmPassword.classList.remove("error");
+                const elements = document.getElementsByClassName("error-message");
+                while(elements.length > 0){
+                    elements[0].parentNode.removeChild(elements[0]);
+                }
+            }
+            else {
+                if (!(password.classList.contains("error"))) {
+                    password.classList.add("error");
+                    confirmPassword.classList.add("error");
+                    const message = document.createElement("p");
+                    message.textContent = "*Passwords do not match";
+                    message.classList.add("error-message");
+                    password.parentNode.insertBefore(message, password.nextSibling);
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -18,45 +43,47 @@
         </div>
         <div class="form-section">
             <div class="section">
-                <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi architecto commodi corporis deleniti distinctio eaque esse facere in minima neque nesciunt obcaecati optio pariatur quos, rem totam veniam voluptates!</p>
+                <p class="info">This is not a real online service! You know you need something like this in your life to help you realise your deepest dreams.<br>Sign up <span style="font-style: italic; font-size: 0.8rem">now</span> to get started.
+                <br><br>You <span style="font-style: italic; font-size: 0.8rem">know</span> you want to.</p>
             </div>
             <div class="section form">
-                <p class="info">Let's do this!</p>
+                <p class="info" style="margin-bottom: 1.25%; margin-top: 1.25%">Let's do this!</p>
                 <form class="form-items">
                     <div class="pair">
-                    <div><label for="firstName">First Name:</label></div>
+                    <div class="label"><label for="firstName">FIRST NAME</label></div>
                     <input type="text" id="firstName">
                     </div>
 
                     <div class="pair">
-                    <div><label for="lastName">Last Name:</label></div>
+                    <div class="label"><label for="lastName">LAST NAME</label></div>
                     <input type="text" id="lastName">
                     </div>
 
                     <div class="pair">
-                    <div><label for="email">Email:</label></div>
+                    <div class="label"><label for="email">EMAIL</label></div>
                     <input type="email" id="email">
                     </div>
 
                     <div class="pair">
-                    <div><label for="phone">Phone Number</label></div>
+                    <div class="label"><label for="phone">PHONE NUMBER</label></div>
                     <input type="number" id="phone">
                     </div>
 
                     <div class="pair">
-                    <div><label for="password">Password:</label></div>
-                    <input type="password" id="password">
+                    <div class="label"><label for="password">PASSWORD</label></div>
+                    <input type="password" id="password" class="error" onkeyup='validate();'>
+                    <p class="error-message">*Passwords do not match</p>
                     </div>
 
                     <div class="pair">
-                    <div><label for="confirmPassword">Confirm Password:</label></div>
-                    <input type="password" id="confirmPassword">
+                    <div class="label"><label for="confirmPassword">CONFIRM PASSWORD</label></div>
+                    <input type="password" id="confirmPassword" class="error" onkeyup='validate();'>
                     </div>
                 </form>
             </div>
             <div class="section">
                 <button type="submit">Create Account</button>
-                <p class="last">Already have an account? Log in</p>
+                <p class="last">Already have an account? <span style="color: #5D6063; font-size: inherit; font-weight: bolder">Log in</span></p>
             </div>
         </div>
 

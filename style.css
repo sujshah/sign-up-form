@@ -79,10 +79,10 @@ a {
 }
 
 .info {
-    padding: 5% 20% 2.5% 5%;
+    /*padding: 5% 20% 2.5% 5%;*/
     font-weight: bold;
     font-size: 0.8rem;
-    margin: 0;
+    margin: 5% 20% 2.5% 5%;
 }
 
 .section {
@@ -92,16 +92,43 @@ a {
 .section.form {
     background-color: white;
     /*height: 100px;*/
+    box-shadow: 0.1rem 0.2rem 0.1rem rgb(204, 204, 204);;
 }
 
 input {
-    border: 2px solid #000;
     /*margin-bottom: 15px;*/
-    /*padding: 5px;*/
-    border-radius: 5px;
-    font-size: 0.6rem;
     appearance: none;
+    padding: 0.2rem;
+    border-radius: 5px;
+    font-size: 0.4rem;
+    box-sizing: border-box;
+    width: 10rem;
+    border: 1px solid #E5E7EB;
     /*ce*/
+}
+
+input:focus {
+    box-shadow: 2px 2px 3px #888888;
+    appearance: none;
+}
+
+.error {
+    border: 2px solid #c00303;
+}
+
+.error:focus {
+    box-shadow: 2px 2px 3px #888888;
+    appearance: none;
+}
+
+.error-message {
+    color: #c00303;
+    font-size: 0.4rem;
+    margin: 0;
+}
+
+input::after {
+    content: "test";
 }
 
 .form-items {
@@ -111,27 +138,32 @@ input {
     width: 70%;
 }
 
+label {
+    font-family: sans-serif;
+    font-size: 0.4rem;
+    letter-spacing: 0.07rem;
+    font-weight: bolder;
+}
+
 .pair {
     font-size: 0.2rem;
-    margin-left: 5%;
+    margin-left: 7.15%;
     flex: 35%;
     padding: 0;
 }
 
-label {
-    font-size: 0.6rem;
-}
 
 button {
     background-color: #596D48;
     color: white;
-    padding: 40px 150px;
+    padding: 0.4rem 1.5rem;
     position: relative;
     top: 20%;
     left: 5%;
     font-weight: bold;
-    font-size: 0.4rem;
-    border-radius: 15px;
+    font-size: 0.55rem;
+    border-radius: 0.3rem;
+    box-shadow: 0.05rem 0.1rem 0.1rem rgb(204, 204, 204);
     border-color: #596D48;
 }
 
